@@ -1,0 +1,60 @@
+name: Bug report
+description: Something in LakehouseBox does not work as documented. `lhbox bug` fills in the environment for you.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This repository is public. Never paste an API key, a catalog secret, `lhbox connect --show-secrets` output or a presigned URL.** A security vulnerability goes to [a private report](https://github.com/lakehousebox/lakehousebox/security/advisories/new) instead.
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where
+      options:
+        - CLI (lhbox)
+        - lhbox duckdb / DuckDB
+        - Another engine (PyIceberg, Spark, Trino, ...)
+        - MCP server
+        - REST API
+        - Account page
+        - Website or docs
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: The error as printed. An `lhbox` error is a JSON object; its `code` matters most.
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: What you ran
+      description: The command, the SQL or the MCP tool call, as you ran it (secrets removed).
+      render: text
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Filled in by `lhbox bug`. Otherwise, the output of `lhbox --version` and `lhbox doctor`.
+      render: text
+  - type: input
+    id: when
+    attributes:
+      label: When (UTC)
+      description: Roughly when it happened, so we can find it in our logs.
+      placeholder: "2026-10-22 14:05"
+  - type: dropdown
+    id: reporter
+    attributes:
+      label: Reported by
+      options:
+        - A person
+        - An agent, on a person's behalf

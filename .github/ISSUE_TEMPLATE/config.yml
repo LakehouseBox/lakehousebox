@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability (private)
+    url: https://github.com/lakehousebox/lakehousebox/security/advisories/new
+    about: Never as a public issue. Or email hello@lakehousebox.com.
+  - name: Account, billing or private data
+    url: mailto:hello@lakehousebox.com
+    about: Anything about your account, or a report you cannot make public.
+  - name: Documentation
+    url: https://lakehousebox.com/docs/
+    about: Setup for agents, the CLI, the MCP server, engines and limits.
