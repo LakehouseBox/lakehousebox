@@ -23,8 +23,8 @@ details as JSON instead of opening a browser.
 Then add:
 
 - **What you ran**: the command, the SQL or the MCP tool call, as you ran it.
-- **What happened**: the error as printed. `lhbox` errors are one JSON object with a `code`; that code is the most
-  useful thing you can paste.
+- **What happened**: the error as printed. `lhbox` errors are one JSON object with a `code` and a
+  `request_id`; those two are the most useful things you can paste.
 - **What you expected.**
 - **`lhbox doctor`**: its output checks the whole path from your machine to a DuckDB session, one line per step.
 

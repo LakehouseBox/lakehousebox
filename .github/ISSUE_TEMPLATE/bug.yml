@@ -25,7 +25,7 @@ body:
     id: what
     attributes:
       label: What happened
-      description: The error as printed. An `lhbox` error is a JSON object; its `code` matters most.
+      description: The error as printed. An `lhbox` error is a JSON object; its `code` and `request_id` matter most.
       render: text
     validations:
       required: true
